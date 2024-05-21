@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: #171100;
+}
+/* ===== Style Common ===== */
+a {
+  text-decoration: none;
+}
+.content {
+  width: 1170px;
+  /*   max-width: calc(100% - 48px); 100%màn hình -24px mỗi bên*/
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: #fff;
+  line-height: 50px;
+  min-width: 118px;
+  padding: 0 16px;
+  border-radius: 999px;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+/* ===== Header ===== */
+.header {
+  background: #fffcf4;
+}
+.fixed {
+  position: sticky;
+  top: -28px;
+  z-index: 1;
+}
+
+.header .body {
+  padding: 36px 0 8px;
+  display: flex;
+  align-items: center;
+}
+.header .nav {
+  margin-left: auto;
+}
+.nav ul {
+  display: flex;
+}
+
+.nav a {
+  position: relative;
+  padding: 8px 21px;
+  color: #5f5b53;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.nav a:hover,
+.nav li.active a {
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  /* currentColor: giữ nguyên màu gốc*/
+  text-shadow: 1px 0 0 currentColor;
+}
+
+.nav li.active a::after {
+  position: absolute;
+  left: 21px;
+  bottom: 6px;
+  content: "";
+  display: block;
+  width: 12px;
+  height: 2px;
+  background-color: var(--primary-color);
+  border-radius: 1px;
+}
+
+.header .action {
+  margin-left: 49px;
+}
+
+.header .sign-up-btn {
+  min-width: 144px;
+}
+
+/* ===== Hero ===== */
+.hero {
+  padding: 56px 0 65px;
+  background: #fffcf4;
+}
+.hero .body {
+  display: flex;
+}
+/* ===== hero-left ===== */
+.media-block {
+  width: 48%;
+  position: relative;
+}
+
+.hero .media-block .img {
+  width: 470px;
+  height: 685px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.hero .hero-summary {
+  position: absolute;
+  right: 0;
+  bottom: 48px;
+  padding: 24px;
+  width: 270px;
+  border-radius: 12px;
+  background: #fff;
+
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.hero-summary .item {
+  display: flex;
+  margin-bottom: 18px;
+  align-items: center;
+}
+
+.hero-summary .item .icon {
+  background: #fff9e8;
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-summary .item:nth-of-type(2) .icon {
+  background: #fcefff;
+}
+.hero-summary .item:nth-of-type(3) .icon {
+  background: #ebeaff;
+}
+
+.hero-summary .info .label {
+  color: #5f5b53;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.85;
+}
+
+.hero-summary .info .title {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.66;
+}
+
+/* ===== hero-right ===== */
+.hero .content-block {
+  width: 52%;
+}
+
+.content-block .info {
+  width: 470px;
+  margin-left: auto;
+}
+
+.content-block .heading {
+  color: var(--primary-color);
+  margin-top: 64px;
+  font-family: Sen;
+  font-size: 5.8rem;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: -1.16px;
+}
+
+.content-block .desc {
+  color: #5f5b53;
+  margin-top: 22px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.66; /* 166.667% */
+}
+
+.content-block .action-btn {
+  margin: 38px 0 48px;
+  display: flex;
+  align-items: center;
+}
+
+.content-block .action-btn .btn {
+  background: #ffb900;
+  line-height: 64px;
+  width: 180px;
+  margin-right: 28px;
+  border-radius: 32px;
+}
+
+.content-block .action-btn .watch-video {
+  background: #fffcf4;
+  display: flex;
+  align-items: center;
+  margin-left: 28px;
+  border: none;
+  cursor: pointer;
+}
+
+.content-block .watch-video .icon {
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content-block span {
+  color: var(--primary-color);
+  margin-left: 14px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 50px;
+}
+
+.content-block .stats {
+  margin-top: -8px;
+}
+
+.content-block .stats strong {
+  color: var(--primary-color);
+  padding: 0 8px 0 28px;
+  font-family: Sen;
+  font-size: 4.4rem;
+  font-weight: 700;
+  line-height: 1.22;
+}
+
+.content-block .stats strong:first-child {
+  padding-left: 0;
+}
